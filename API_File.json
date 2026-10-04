@@ -1,0 +1,84 @@
+{
+  "name": "LegalEase API",
+  "version": "1.0.0",
+  "description": "API specification for the LegalEase AI-Powered Legal Document Generator.",
+  "base_url": "https://your-api-domain.com",
+  "endpoints": [
+    {
+      "method": "GET",
+      "path": "/",
+      "description": "Check that the LegalEase API is running.",
+      "response": {
+        "message": "LegalEase API is running",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "description": "Health check endpoint.",
+      "response": {
+        "status": "OK",
+        "service": "LegalEase API"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/generate/employment",
+      "description": "Generate an employment contract.",
+      "request_body": {
+        "employee_name": "Arun Kumar",
+        "company_name": "ABC Technologies",
+        "job_title": "Software Developer",
+        "work_location": "Chennai",
+        "employment_type": "Full Time",
+        "start_date": "2026-10-01",
+        "salary": "600000 INR per year",
+        "additional_terms": ""
+      },
+      "response": {
+        "success": true,
+        "document_type": "Employment Contract",
+        "document": "Generated employment contract text"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/generate/nda",
+      "description": "Generate a non-disclosure agreement.",
+      "request_body": {
+        "disclosing_party": "ABC Technologies",
+        "receiving_party": "Arun Kumar",
+        "effective_date": "2026-10-01",
+        "confidential_information": "Business and technical information",
+        "duration": "2 years",
+        "additional_terms": ""
+      },
+      "response": {
+        "success": true,
+        "document_type": "Non-Disclosure Agreement",
+        "document": "Generated NDA text"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/generate/lease",
+      "description": "Generate a residential lease agreement.",
+      "request_body": {
+        "landlord_name": "Ravi Kumar",
+        "tenant_name": "Arun Kumar",
+        "property_address": "Coimbatore, Tamil Nadu",
+        "monthly_rent": "15000 INR",
+        "lease_duration": "12 months",
+        "start_date": "2026-10-01",
+        "security_deposit": "30000 INR",
+        "additional_terms": ""
+      },
+      "response": {
+        "success": true,
+        "document_type": "Residential Lease Agreement",
+        "document": "Generated residential lease text"
+      }
+    }
+  ]
+}
